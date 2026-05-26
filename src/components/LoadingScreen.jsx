@@ -19,7 +19,8 @@ export default function LoadingScreen() {
     let i = 0;
     const interval = setInterval(() => {
       if (i < BOOT_MESSAGES.length) {
-        setMessages((prev) => [...prev, BOOT_MESSAGES[i]]);
+        const nextMsg = BOOT_MESSAGES[i];
+        setMessages((prev) => [...prev, nextMsg]);
         setProgress(Math.round(((i + 1) / BOOT_MESSAGES.length) * 100));
         i++;
       } else {
@@ -111,9 +112,9 @@ export default function LoadingScreen() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3 }}
               style={{
-                color: msg.includes('READY') ? '#06b6d4' : 'rgba(240,249,255,0.6)',
-                fontWeight: msg.includes('READY') ? 700 : 400,
-                textShadow: msg.includes('READY') ? '0 0 10px rgba(6,182,212,0.8)' : 'none',
+                color: msg && msg.includes('READY') ? '#06b6d4' : 'rgba(240,249,255,0.6)',
+                fontWeight: msg && msg.includes('READY') ? 700 : 400,
+                textShadow: msg && msg.includes('READY') ? '0 0 10px rgba(6,182,212,0.8)' : 'none',
               }}
             >
               {msg}
