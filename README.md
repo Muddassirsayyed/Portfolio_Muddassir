@@ -142,5 +142,5 @@ MIT © [Muddassir Sayyed](https://github.com/Muddassirsayyed)
 ---
 
 <div align="center">
-Built with ❤️ by <strong>Muddassir Sayyed</strong> · Powered by React + Tailwind + Framer Motion
+Built with ❤️ by <strong>Muddassir Sayyed</strong> · Powered by React + Tailwind + Framer Motion · Auto-deployed on Vercel
 </div>
